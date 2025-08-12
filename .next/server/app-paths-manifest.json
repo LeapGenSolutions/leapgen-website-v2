@@ -1,0 +1,8 @@
+{
+  "/page": "app/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/products/data-coffee/page": "app/products/data-coffee/page.js",
+  "/resources/datacoffee-roi-calculator/page": "app/resources/datacoffee-roi-calculator/page.js",
+  "/about/page": "app/about/page.js",
+  "/careers/page": "app/careers/page.js"
+}
