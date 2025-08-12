@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, TrendingUp, Users, Clock, Shield, Award, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Button } from '@/components/ui/button'
+import { Button } from '../../components/ui/button'
 
 const CustomerSuccessPage = () => {
   const caseStudies = [
@@ -116,7 +116,7 @@ const CustomerSuccessPage = () => {
               Customer <span className="gradient-text">Success Stories</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Discover how organizations across industries are transforming their operations 
+              Discover how organizations across industries are transforming their operations
               with LeapGen.AI solutions, achieving measurable results and driving innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-8 text-center">

@@ -1,11 +1,10 @@
-
 'use client'
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Calendar, Download, Phone } from 'lucide-react'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
+import { Button } from './ui/button'
+import { Card, CardContent } from './ui/card'
 
 const CTASection = () => {
   const ctaOptions = [
@@ -59,10 +58,10 @@ const CTASection = () => {
             Ready to <span className="gradient-text">Transform</span> Your Business?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
-            Join 500+ organizations already using LeapGen.AI to reduce costs by 60%, 
+            Join 500+ organizations already using LeapGen.AI to reduce costs by 60%,
             improve efficiency, and drive measurable results. Get started today.
           </p>
-          
+
           {/* Urgency Element */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -88,17 +87,15 @@ const CTASection = () => {
         >
           {ctaOptions.map((option, index) => {
             const IconComponent = option.icon
-            
+
             return (
-              <Card key={index} className={`group hover:scale-105 transition-all duration-300 ${
-                option.primary ? 'ring-2 ring-purple-500/50 bg-gradient-to-br from-purple-900/20 to-blue-900/20' : ''
-              }`}>
+              <Card key={index} className={`group hover:scale-105 transition-all duration-300 ${option.primary ? 'ring-2 ring-purple-500/50 bg-gradient-to-br from-purple-900/20 to-blue-900/20' : ''
+                }`}>
                 <CardContent className="p-8 text-center">
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center ${
-                    option.primary 
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600' 
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center ${option.primary
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600'
                       : 'bg-gray-800 group-hover:bg-gray-700'
-                  } transition-colors`}>
+                    } transition-colors`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">
@@ -107,10 +104,10 @@ const CTASection = () => {
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {option.description}
                   </p>
-                  <Button 
-                    asChild 
-                    variant={option.primary ? "default" : "outline"} 
-                    size="lg" 
+                  <Button
+                    asChild
+                    variant={option.primary ? "default" : "outline"}
+                    size="lg"
                     className="w-full group"
                   >
                     <Link href={option.href}>
@@ -150,7 +147,7 @@ const CTASection = () => {
               <div className="text-sm text-gray-400">Certified</div>
             </div>
           </div>
-          
+
           <div className="mt-8 text-sm text-gray-400">
             Enterprise-grade security • HIPAA compliant • GDPR ready
           </div>

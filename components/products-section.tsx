@@ -1,13 +1,12 @@
-
 'use client'
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Bot, Database, FileText, Users, TrendingUp, Shield } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import AnimatedCounter from '@/components/animated-counter'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
+import { Button } from './ui/button'
+import AnimatedCounter from './animated-counter'
 
 const ProductsSection = () => {
   const products = [
@@ -95,7 +94,7 @@ const ProductsSection = () => {
             <span className="gradient-text">Deliver Results</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Our three core products work together to transform your business operations, 
+            Our three core products work together to transform your business operations,
             reduce costs, and accelerate growth with measurable outcomes.
           </p>
         </motion.div>
@@ -212,7 +211,7 @@ const ProductsSection = () => {
             Ready to Transform Your Business?
           </h3>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join the 500+ organizations already using LeapGen.AI to reduce costs, 
+            Join the 500+ organizations already using LeapGen.AI to reduce costs,
             improve efficiency, and drive measurable results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

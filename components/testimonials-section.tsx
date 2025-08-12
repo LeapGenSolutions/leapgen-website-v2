@@ -1,10 +1,9 @@
-
 'use client'
 
 import { motion } from 'framer-motion'
 import { Star, Quote } from 'lucide-react'
 import Image from 'next/image'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent } from './ui/card'
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -76,7 +75,7 @@ const TestimonialsSection = () => {
             What Our <span className="gradient-text">Customers Say</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. See how organizations like yours are 
+            Don't just take our word for it. See how organizations like yours are
             achieving measurable results with LeapGen.AI solutions.
           </p>
         </motion.div>

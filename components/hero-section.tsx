@@ -1,12 +1,11 @@
-
 'use client'
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Play, Users, TrendingUp, Shield } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Button } from '@/components/ui/button'
-import AnimatedCounter from '@/components/animated-counter'
+import { Button } from './ui/button'
+import AnimatedCounter from './animated-counter'
 
 const HeroSection = () => {
   return (
@@ -69,8 +68,8 @@ const HeroSection = () => {
                 transition={{ delay: 0.4 }}
                 className="text-xl text-gray-300 leading-relaxed"
               >
-                Join 500+ organizations using LeapGen.AI to automate customer support, 
-                unlock data insights, and revolutionize clinical documentation—with 
+                Join 500+ organizations using LeapGen.AI to automate customer support,
+                unlock data insights, and revolutionize clinical documentation—with
                 enterprise-grade security and rapid deployment.
               </motion.p>
 
@@ -173,7 +172,7 @@ const HeroSection = () => {
                   className="object-cover rounded-2xl shadow-2xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-blue-600/20 rounded-2xl" />
-                
+
                 {/* Floating Stats Cards - Repositioned within image bounds */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}

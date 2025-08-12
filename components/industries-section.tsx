@@ -1,12 +1,11 @@
-
 'use client'
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Heart, Building2, Factory, ShoppingCart } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
+import { Button } from './ui/button'
 
 const IndustriesSection = () => {
   const industries = [
@@ -104,7 +103,7 @@ const IndustriesSection = () => {
             Industry-Specific <span className="gradient-text">AI Solutions</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Our AI solutions are tailored to meet the unique challenges and requirements 
+            Our AI solutions are tailored to meet the unique challenges and requirements
             of your industry, ensuring maximum impact and compliance.
           </p>
         </motion.div>
@@ -177,7 +176,7 @@ const IndustriesSection = () => {
             Don't See Your Industry?
           </h3>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Our AI solutions are flexible and can be customized for any industry. 
+            Our AI solutions are flexible and can be customized for any industry.
             Let's discuss how we can address your specific challenges.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
