@@ -1,37 +1,97 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, Calendar, MessageSquare, ArrowRight } from 'lucide-react'
+import { Mail, Phone, Calendar, MessageSquare, ArrowRight, MapPin } from 'lucide-react'
 import { GradientButton } from '../components/ui/gradient-button'
 import { EnhancedCard } from '../components/ui/enhanced-card'
 import { AnimatedBackground } from '../components/ui/animated-background'
 import { FloatingElements } from '../components/ui/floating-elements'
 import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
 import { toast } from 'sonner'
+import { CONTACT_INFO } from '@/config/contact'
 
-interface ContactForm {
-  name: string
-  email: string
-  company: string
-  phone: string
-  message: string
-  type: string
-}
+const contactFormSchema = z.object({
+  name: z.string().min(1, 'Name is required').transform(s => s.trim()),
+  email: z.string().min(1, 'Email is required').email('Invalid email address').transform(s => s.trim().toLowerCase()),
+  company: z.string().optional().transform(s => s?.trim() || ''),
+  phone: z.string().optional().transform(s => s?.trim() || ''),
+  message: z.string().min(1, 'Message is required').transform(s => s.trim()),
+  type: z.string().default('demo'),
+  honeypot: z.string().max(0, 'Bot detected').optional(),
+})
+
+type ContactForm = z.infer<typeof contactFormSchema>
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactForm>()
+  const formOpenedAtRef = useRef<number>(Date.now())
+  
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactForm>({
+    resolver: zodResolver(contactFormSchema),
+    mode: 'onChange',
+  })
 
   const onSubmit = async (data: ContactForm) => {
     setIsSubmitting(true)
+    
+    // Calculate form duration (anti-spam measure)
+    const formDurationMs = Date.now() - formOpenedAtRef.current
+    
+    // Prepare webhook payload
+    const webhookPayload = {
+      ...data,
+      timestamp: new Date().toISOString(),
+      source: 'Contact Form',
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      durationMs: formDurationMs,
+    }
+    
+    console.log('Sending webhook payload:', webhookPayload)
+    
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      toast.success('Thank you! We\'ll be in touch within 24 hours.')
-      reset()
+      // Create AbortController for timeout
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
+      
+      // Send to serverless proxy
+      const response = await fetch('/api/contact-webhook', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(webhookPayload),
+        signal: controller.signal,
+      })
+      
+      clearTimeout(timeoutId)
+      
+      console.log('Response status:', response.status)
+      console.log('Response ok:', response.ok)
+      
+      if (response.ok) {
+        const result = await response.json()
+        console.log('Webhook sent successfully:', result)
+        toast.success('Thank you! We\'ll be in touch within 24 hours.')
+        reset()
+        // Reset form duration timer
+        formOpenedAtRef.current = Date.now()
+      } else {
+        const errorData = await response.json().catch(() => ({ error: 'Unknown error' }))
+        console.error('Webhook failed with status:', response.status, errorData)
+        toast.error('Something went wrong. Please try again or contact us directly.')
+      }
     } catch (error) {
-      toast.error('Something went wrong. Please try again.')
+      if (error instanceof Error && error.name === 'AbortError') {
+        console.error('Webhook request timed out')
+        toast.error('Request timed out. Please try again or contact us directly.')
+      } else {
+        console.error('Webhook error:', error)
+        toast.error('Something went wrong. Please try again or contact us directly.')
+      }
     }
     setIsSubmitting(false)
   }
@@ -49,14 +109,14 @@ const Contact = () => {
       title: 'Speak with Expert',
       description: 'Talk directly with our AI specialists',
       action: 'Call Now',
-      href: 'tel:+15551234567'
+      href: CONTACT_INFO.phoneLink
     },
     {
       icon: Mail,
       title: 'Email Support',
       description: 'Send us your questions and we\'ll respond quickly',
       action: 'Send Email',
-      href: 'mailto:contact@leapgen.ai'
+      href: `mailto:${CONTACT_INFO.email}`
     }
   ]
 
@@ -170,29 +230,35 @@ const Contact = () => {
               </p>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                {/* Honeypot field - hidden from users, but bots might fill it */}
+                <input
+                  {...register('honeypot')}
+                  type="text"
+                  style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+                
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Name *</label>
                     <input
-                      {...register('name', { required: 'Name is required' })}
+                      {...register('name')}
                       className="form-input"
                       placeholder="Your full name"
+                      autoComplete="name"
                     />
                     {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name.message}</p>}
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Email *</label>
                     <input
-                      {...register('email', { 
-                        required: 'Email is required',
-                        pattern: {
-                          value: /\S+@\S+\.\S+/,
-                          message: 'Invalid email address'
-                        }
-                      })}
+                      {...register('email')}
                       type="email"
+                      inputMode="email"
                       className="form-input"
                       placeholder="your@email.com"
+                      autoComplete="email"
                     />
                     {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email.message}</p>}
                   </div>
@@ -205,14 +271,18 @@ const Contact = () => {
                       {...register('company')}
                       className="form-input"
                       placeholder="Your company"
+                      autoComplete="organization"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Phone</label>
                     <input
                       {...register('phone')}
+                      type="tel"
+                      inputMode="tel"
                       className="form-input"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder={CONTACT_INFO.phoneFormatted}
+                      autoComplete="tel"
                     />
                   </div>
                 </div>
@@ -231,7 +301,7 @@ const Contact = () => {
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Message *</label>
                   <textarea
-                    {...register('message', { required: 'Message is required' })}
+                    {...register('message')}
                     rows={4}
                     className="form-input"
                     placeholder="Tell us about your needs and how we can help..."
@@ -267,7 +337,7 @@ const Contact = () => {
                   <Mail className="w-6 h-6 text-purple-400" />
                   <div>
                     <div className="text-white font-medium">Email</div>
-                    <div className="text-gray-300">contact@leapgen.ai</div>
+                    <div className="text-gray-300">{CONTACT_INFO.email}</div>
                   </div>
                 </div>
                 
@@ -275,7 +345,24 @@ const Contact = () => {
                   <Phone className="w-6 h-6 text-purple-400" />
                   <div>
                     <div className="text-white font-medium">Phone</div>
-                    <div className="text-gray-300">+1 (555) 123-4567</div>
+                    <div className="text-gray-300">{CONTACT_INFO.phoneFormatted}</div>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <MapPin className="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div className="text-white font-medium">Address</div>
+                    <address className="text-gray-300 not-italic">
+                      <a 
+                        href={CONTACT_INFO.googleMapsUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-white transition-colors"
+                      >
+                        {CONTACT_INFO.addressFormatted}
+                      </a>
+                    </address>
                   </div>
                 </div>
                 
