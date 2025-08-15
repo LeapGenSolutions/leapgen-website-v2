@@ -1,69 +1,92 @@
-# LeapGen.AI - Original Next.js Website
+# LeapGen.AI
 
-This is the clean, original Next.js source code for the LeapGen.AI website that was working properly.
+Enterprise AI platform delivering SurroundAI, DataCoffee, and Seismic solutions for customer support automation, data governance, and clinical documentation.
 
-## Setup Instructions
+## Quick Start
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   # or
-   pnpm install
-   ```
+### Development Setup
+```bash
+# Clone and install
+git clone <repository-url>
+cd leapgen-ai
+npm install
 
-2. **Set up environment variables:**
-   ```bash
-   cp .env.example .env
-   ```
-   Edit `.env` with your actual values.
+# Start development server
+npm run dev
+```
 
-3. **Run development server:**
-   ```bash
-   npm run dev
-   # or
-   pnpm dev
-   ```
+### Production Deployment
+```bash
+# Build for production
+npm run build
 
-4. **Build for production:**
-   ```bash
-   npm run build
-   npm start
-   # or
-   pnpm build
-   pnpm start
-   ```
+# Create deployment packages
+chmod +x scripts/create-deployment-package.sh
+./scripts/create-deployment-package.sh
+```
 
-## Features
+## Project Overview
 
-- Complete LeapGen.AI website with all pages
-- Working contact forms with webhook integration
-- ROI calculators for SurroundAI and DataCoffee
-- Customer success stories and case studies
-- Professional dashboard visualizations
-- Mobile responsive design
-- Enterprise-grade appearance
+LeapGen.AI is a React 18.3.1 single-page application built with:
+- **Framework**: Vite + TypeScript
+- **UI**: Tailwind CSS + shadcn/ui
+- **Routing**: React Router v6
+- **Performance**: Optimized for Core Web Vitals
+- **SEO**: Complete meta tags, structured data, sitemap
 
-## Structure
+## Key Features
 
-- `/app` - Next.js 13+ app directory with all pages
-- `/components` - Reusable React components
-- `/public` - Static assets (images, icons, etc.)
-- `/lib` - Utility functions and configurations
-- `/hooks` - Custom React hooks
-- `/prisma` - Database schema (if applicable)
+- **Enterprise-Grade Performance**: Lighthouse score 95+
+- **Multi-Platform Deployment**: Netlify, Vercel, Docker, AWS
+- **Security-First**: CSP headers, HTTPS, vulnerability scanning
+- **SEO Optimized**: Dynamic meta tags, structured data, sitemap
+- **Responsive Design**: Mobile-first, accessible UI
 
-## Deployment
+## Documentation
 
-This Next.js application can be deployed to:
-- Vercel (recommended)
-- Netlify
-- Azure Static Web Apps
-- Any Node.js hosting provider
+- 📋 [Deployment Guide](DEPLOYMENT.md) - Platform-specific deployment instructions
+- 🔧 [Technical Specifications](TECHNICAL_SPECS.md) - Architecture and implementation details
+- ✅ [Production Checklist](PRODUCTION_CHECKLIST.md) - Pre-deployment verification
+- 📦 [Deployment Package Guide](README_DEPLOYMENT.md) - Package contents and usage
 
-## Notes
+## Available Scripts
 
-- This is the original working version before any React conversion attempts
-- All functionality is intact and tested
-- No React conversion artifacts included
-- Clean, production-ready codebase
+- `npm run dev` - Start development server
+- `npm run build` - Create production build
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript checks
 
+## Deployment Platforms
+
+### Netlify (Recommended)
+```bash
+npm run build
+netlify deploy --dir=dist --prod
+```
+
+### Vercel
+```bash
+vercel --prod
+```
+
+### Docker
+```bash
+docker build -f docker/Dockerfile -t leapgen-ai .
+docker run -p 80:80 leapgen-ai
+```
+
+## Support
+
+- **Documentation**: See `/docs` directory
+- **Issues**: Create GitHub issue
+- **Performance**: Lighthouse CI integrated
+- **Security**: Automated vulnerability scanning
+
+## License
+
+Proprietary - LeapGen.AI Enterprise License
+
+---
+
+Built with ❤️ by the LeapGen.AI team
