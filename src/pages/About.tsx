@@ -125,11 +125,6 @@ const About = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </GradientButton>
               </Link>
-              <a href="#team">
-                <GradientButton variant="secondary" size="lg">
-                  Meet Our Team
-                </GradientButton>
-              </a>
             </div>
 
             {/* Stats Grid */}

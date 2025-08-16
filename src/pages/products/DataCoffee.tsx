@@ -94,7 +94,7 @@ const DataCoffee = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </GradientButton>
               </Link>
-              <Link to="/resources/interactive-roi-calculator">
+              <Link to="/resources/roi-calculator">
                 <GradientButton variant="secondary" size="lg">
                   Calculate Your ROI
                 </GradientButton>

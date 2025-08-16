@@ -370,7 +370,7 @@ const Contact = () => {
                   <Calendar className="w-6 h-6 text-purple-400" />
                   <div>
                     <div className="text-white font-medium">Business Hours</div>
-                    <div className="text-gray-300">Mon-Fri: 9AM-6PM PST</div>
+                    <div className="text-gray-300">Mon-Fri: 9AM-6PM EST</div>
                   </div>
                 </div>
               </div>

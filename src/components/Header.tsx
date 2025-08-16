@@ -196,13 +196,6 @@ const Header = () => {
               About Us
             </Link>
             <Link 
-              to="/resources" 
-              className="text-white hover:text-purple-400 transition-colors"
-              onClick={() => handleMenuItemClick('Resources', '/resources')}
-            >
-              Resources
-            </Link>
-            <Link 
               to="/contact" 
               className="text-white hover:text-purple-400 transition-colors"
               onClick={() => handleMenuItemClick('Contact', '/contact')}
