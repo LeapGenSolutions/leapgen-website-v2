@@ -231,61 +231,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section id="team" className="section-padding bg-gray-900">
-        <div className="container mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Meet Our Leadership Team</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our team combines decades of experience in AI research, enterprise software, and building products that scale to millions of users.
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 border border-gray-700 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-6">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full object-cover border-2 border-purple-400"
-                  />
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
-                    <div className="text-purple-400 font-medium mb-3">{member.role}</div>
-                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">{member.bio}</p>
-                    
-                    <div>
-                      <div className="text-sm font-medium text-gray-400 mb-2">Expertise:</div>
-                      <div className="flex flex-wrap gap-2">
-                        {member.expertise.map((skill, skillIndex) => (
-                          <span key={skillIndex} className="text-xs bg-purple-900/30 text-purple-300 px-2 py-1 rounded">
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Journey Timeline */}
       <section className="section-padding bg-black">
         <div className="container mx-auto">
