@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from './ui/button'
+import logo from '../assets/logo.png'
 import { MobileNavigation } from './ui/mobile-navigation'
 import { useAnalytics } from '@/utils/analytics'
 
@@ -101,6 +102,7 @@ const Header = () => {
             className="flex items-center space-x-2 hover-scale" 
             onClick={() => handleMenuItemClick('Logo', '/')}
           >
+            <img src={logo} alt="LeapGen.AI Logo" className="h-10 w-10 object-contain mr-2" />
             <span className="text-2xl font-bold gradient-text">LeapGen.AI</span>
           </Link>
 

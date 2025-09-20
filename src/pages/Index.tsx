@@ -4,9 +4,9 @@ import ProductsSection from '../components/ProductsSection'
 import TestimonialsSection from '../components/TestimonialsSection'
 import CTASection from '../components/CTASection'
 import SEO from '../components/SEO'
-import { ConversionHero } from '@/components/ui/conversion-hero';
-import { ConversionMonitor } from '@/components/ui/conversion-monitor';
 import { useAnalytics } from '@/utils/analytics';
+import AboutUs from './AboutUs';
+import Features from './Features';
 
 const Index = () => {
   const analytics = useAnalytics();
@@ -30,13 +30,12 @@ const Index = () => {
       />
       <div className="min-h-screen">
         {/* Use the improved HeroSection instead of A/B testing for now */}
+        <AboutUs />
         <HeroSection />
         <ProductsSection />
+        <Features />
         <TestimonialsSection />
         <CTASection />
-      
-        {/* Real-time conversion monitoring */}
-        <ConversionMonitor position="bottom-right" />
         
         {/* Performance monitoring */}
         <div id="performance-monitor-root" />

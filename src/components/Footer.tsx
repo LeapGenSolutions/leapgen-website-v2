@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Youtube } from 'lucide-react'
 import { CONTACT_INFO } from '@/config/contact'
+import logo from '../assets/logo.png'
 
 const Footer = () => {
   return (
@@ -10,6 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
+              <img src={logo} alt="LeapGen.AI Logo" className="h-10 w-10 object-contain mr-2" />
               <span className="text-2xl font-bold gradient-text">LeapGen.AI</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
