@@ -126,17 +126,6 @@ const HeroSection = () => {
                 className="flex items-center justify-center lg:justify-start space-x-4 pt-6"
               >
                 <span className="text-sm text-gray-400">Join 50+ demos scheduled this month</span>
-                <div className="flex space-x-1">
-                  {['A', 'B', 'C', 'D'].map((letter, index) => (
-                    <div
-                      key={letter}
-                      className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center text-white text-sm font-semibold"
-                      style={{ marginLeft: index > 0 ? '-8px' : '0' }}
-                    >
-                      {letter}
-                    </div>
-                  ))}
-                </div>
               </motion.div>
             </motion.div>
 
