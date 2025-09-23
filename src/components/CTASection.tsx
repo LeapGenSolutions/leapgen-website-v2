@@ -42,17 +42,6 @@ const CTASection = () => {
             viewport={{ once: true }}
             className="flex items-center justify-center space-x-4 mb-12"
           >
-            <div className="flex space-x-1">
-              {['A', 'B', 'C', 'D'].map((letter, index) => (
-                <div
-                  key={letter}
-                  className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center text-white font-semibold"
-                  style={{ marginLeft: index > 0 ? '-8px' : '0' }}
-                >
-                  {letter}
-                </div>
-              ))}
-            </div>
             <span className="text-gray-300 font-medium">
               <span className="gradient-text font-bold">50+ demos</span> scheduled this month
             </span>
