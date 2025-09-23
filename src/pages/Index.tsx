@@ -7,6 +7,7 @@ import SEO from '../components/SEO'
 import { useAnalytics } from '@/utils/analytics';
 import AboutUs from './AboutUs';
 import Features from './Features';
+import WhyUs from './WhyUs';
 
 const Index = () => {
   const analytics = useAnalytics();
@@ -34,6 +35,7 @@ const Index = () => {
         <HeroSection />
         <ProductsSection />
         <Features />
+        <WhyUs />
         <TestimonialsSection />
         <CTASection />
         
