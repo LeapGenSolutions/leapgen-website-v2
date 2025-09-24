@@ -64,16 +64,27 @@ const Seismic = () => {
               <span className="gradient-text-seismic">Seismic</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-              Clinical Documentation AI
+              AI For Healthcare
             </h2>
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Reduce Documentation Time by 79% with 99% Billing Accuracy
             </h3>
+
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              AI-powered clinical notes with emotional intelligence, automated billing codes, and HIPAA compliance. 
-              Transform healthcare documentation while enhancing patient care quality and revenue cycle management.
+              We automate workflows so you can do what you do best - healthcare.
             </p>
-            
+            <hr className="mb-8 border-t border-gray-700" />
+
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold mb-4 text-center gradient-text-seismic">Top Product Highlights</h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                <span className="bg-blue-700 text-white px-5 py-2 rounded-full font-medium flex items-center gap-2">Ambient transcription<span className="text-xl">📝</span></span>
+                <span className="bg-blue-700 text-white px-5 py-2 rounded-full font-medium flex items-center gap-2">Clinical Decision Support<span className="text-xl">💡</span></span>
+                <span className="bg-blue-700 text-white px-5 py-2 rounded-full font-medium flex items-center gap-2">Chatbots / Avatars<span className="text-xl">🤖</span></span>
+              </div>
+            </div>
+            <hr className="mb-8 border-t border-gray-700" />
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link to="/contact?type=demo&product=seismic">
                 <GradientButton variant="seismic" size="lg">
@@ -99,6 +110,17 @@ const Seismic = () => {
                 </EnhancedCard>
               ))}
             </div>
+            {/* Business Outcomes */}
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold mb-4 text-center text-white">Business Outcomes</h3>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto text-lg text-gray-200 justify-center place-items-center">
+                <li className="flex items-center gap-2 justify-center"><span className="text-green-400">•</span> Increase revenue</li>
+                <li className="flex items-center gap-2 justify-center"><span className="text-green-400">•</span> Reduce patient wait times</li>
+                <li className="flex items-center gap-2 justify-center"><span className="text-green-400">•</span> Improve clinical judgment</li>
+                <li className="flex items-center gap-2 justify-center"><span className="text-green-400">•</span> Reduce missed diagnoses</li>
+              </ul>
+            </div>
+
           </motion.div>
         </div>
       </section>
@@ -128,10 +150,10 @@ const Seismic = () => {
             >
               <h2 className="text-4xl font-bold text-white mb-6">Advanced Healthcare AI</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Seismic combines cutting-edge AI technology with deep healthcare expertise to deliver documentation solutions 
+                Seismic combines cutting-edge AI technology with deep healthcare expertise to deliver documentation solutions
                 that enhance both efficiency and care quality.
               </p>
-              
+
               <div className="space-y-6">
                 <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-3">Clinical Documentation Made Simple</h3>
@@ -172,9 +194,8 @@ const Seismic = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                }`}
+                className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+                  }`}
               >
                 {/* Feature Content */}
                 <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
@@ -184,7 +205,7 @@ const Seismic = () => {
                     </div>
                     <h3 className="text-3xl font-bold text-white">{feature.title}</h3>
                   </div>
-                  
+
                   <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                     {feature.description}
                   </p>
@@ -233,7 +254,7 @@ const Seismic = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Seismic revolutionizes how healthcare providers document patient care, reducing administrative burden while improving care quality and billing accuracy.
               </p>
-              
+
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <motion.div
@@ -272,11 +293,11 @@ const Seismic = () => {
                   <Heart className="w-16 h-16 mx-auto mb-4 text-red-400" />
                   <h3 className="text-2xl font-bold text-white mb-4">Patient-Centered Care</h3>
                   <p className="text-gray-300">
-                    By reducing documentation time by 79%, healthcare providers can spend more time with patients, 
+                    By reducing documentation time by 79%, healthcare providers can spend more time with patients,
                     leading to better outcomes and higher satisfaction scores.
                   </p>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div className="bg-gray-800/50 rounded-lg p-4">
                     <div className="text-2xl font-bold gradient-text">2x</div>
