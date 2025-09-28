@@ -54,9 +54,7 @@ const HealthcareUseCase = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <AnimatedBackground variant="mesh" theme="healthcare" className="absolute inset-0 opacity-20" />
-      <FloatingElements count={8} variant="circles" theme="healthcare" className="absolute inset-0 opacity-25" />
-      {/* Hero Section */}
+      
       <section className="pt-32 pb-16 px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

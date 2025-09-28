@@ -148,9 +148,7 @@ const MedicalDocumentationRevolution = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <AnimatedBackground variant="mesh" theme="seismic" className="absolute inset-0 opacity-25" />
-      <FloatingElements count={10} variant="hexagons" theme="seismic" className="absolute inset-0 opacity-20" />
-      {/* Hero Section */}
+      
       <section className="pt-32 pb-16 px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           <motion.div

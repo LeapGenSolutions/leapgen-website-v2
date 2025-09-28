@@ -190,9 +190,7 @@ const AccountingCompleteSolution = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <AnimatedBackground variant="particles" theme="finance" className="absolute inset-0 opacity-15" />
-      <FloatingElements count={8} variant="squares" theme="finance" className="absolute inset-0 opacity-20" />
-      {/* Breadcrumb */}
+      
       <section className="pt-24 pb-8 px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           <nav className="text-sm text-muted-foreground">

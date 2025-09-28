@@ -87,9 +87,7 @@ const SLED = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <AnimatedBackground variant="geometric" theme="government" className="absolute inset-0 opacity-20" />
-      <FloatingElements count={8} variant="circles" theme="government" className="absolute inset-0 opacity-15" />
-      {/* Hero Section */}
+      
       <section className="pt-32 pb-16 px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           <motion.div

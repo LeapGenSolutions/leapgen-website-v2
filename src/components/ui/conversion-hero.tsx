@@ -107,8 +107,6 @@ const ConversionHero: React.FC<ConversionHeroProps> = ({
   if (currentVariant === 'video-first') {
     return (
       <div className={cn("relative min-h-screen flex items-center overflow-hidden", className)}>
-        <AnimatedBackground variant="mesh" theme="primary" className="absolute inset-0 opacity-30" />
-        <FloatingElements count={8} variant="mixed" theme="primary" className="absolute inset-0 opacity-20" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -189,8 +187,6 @@ const ConversionHero: React.FC<ConversionHeroProps> = ({
   if (currentVariant === 'social-proof') {
     return (
       <div className={cn("relative min-h-screen flex items-center overflow-hidden", className)}>
-        <AnimatedBackground variant="gradient" theme="primary" className="absolute inset-0 opacity-40" />
-        <FloatingElements count={6} variant="circles" theme="primary" className="absolute inset-0 opacity-15" />
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -261,8 +257,6 @@ const ConversionHero: React.FC<ConversionHeroProps> = ({
   if (currentVariant === 'urgency') {
     return (
       <div className={cn("relative min-h-screen flex items-center overflow-hidden", className)}>
-        <AnimatedBackground variant="particles" theme="primary" className="absolute inset-0 opacity-30" />
-        <FloatingElements count={5} variant="hexagons" theme="primary" className="absolute inset-0 opacity-20" />
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -337,8 +331,6 @@ const ConversionHero: React.FC<ConversionHeroProps> = ({
   // Default value-focused variant
   return (
     <div className={cn("relative min-h-screen flex items-center overflow-hidden", className)}>
-      <AnimatedBackground variant="mesh" theme="primary" className="absolute inset-0 opacity-30" />
-      <FloatingElements count={6} variant="mixed" theme="primary" className="absolute inset-0 opacity-20" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

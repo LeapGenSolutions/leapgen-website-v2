@@ -92,9 +92,7 @@ const DataCoffeeHealthcare = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <AnimatedBackground variant="mesh" theme="datacoffee" className="absolute inset-0 opacity-20" />
-      <FloatingElements count={6} variant="mixed" theme="datacoffee" className="absolute inset-0 opacity-15" />
-      {/* Hero Section */}
+      
       <section className="pt-32 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

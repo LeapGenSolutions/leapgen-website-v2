@@ -162,10 +162,6 @@ const Resources = () => {
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <AnimatedBackground variant="geometric" theme="retail" className="absolute inset-0" />
-        <FloatingElements count={12} variant="squares" theme="retail" className="absolute inset-0" />
-        
-        {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <div className="relative w-full h-full">
             <img

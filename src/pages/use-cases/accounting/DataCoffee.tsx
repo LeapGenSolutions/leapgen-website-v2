@@ -124,9 +124,7 @@ const AccountingDataCoffee = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <AnimatedBackground variant="gradient" theme="datacoffee" className="absolute inset-0 opacity-20" />
-      <FloatingElements count={6} variant="hexagons" theme="datacoffee" className="absolute inset-0 opacity-15" />
-      {/* Breadcrumb */}
+      
       <section className="pt-24 pb-8 px-4">
         <div className="max-w-7xl mx-auto">
           <nav className="text-sm text-muted-foreground">

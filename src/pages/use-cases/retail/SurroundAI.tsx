@@ -82,9 +82,7 @@ const SurroundAIRetail = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <AnimatedBackground variant="mesh" theme="retail" className="absolute inset-0 opacity-20" />
-      <FloatingElements count={6} variant="mixed" theme="retail" className="absolute inset-0 opacity-15" />
-      {/* Breadcrumb */}
+      
       <section className="pt-32 pb-8 px-4">
         <div className="max-w-7xl mx-auto">
           <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">

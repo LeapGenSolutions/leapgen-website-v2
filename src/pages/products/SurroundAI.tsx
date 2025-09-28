@@ -46,8 +46,7 @@ const SurroundAI = () => {
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="section-padding relative overflow-hidden theme-surroundai">
-        <AnimatedBackground variant="mesh" theme="surroundai" className="absolute inset-0" />
-        <FloatingElements count={10} variant="mixed" theme="surroundai" className="absolute inset-0" />
+        
         <div className="container mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

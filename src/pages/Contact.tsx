@@ -137,8 +137,7 @@ const Contact = () => {
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="section-padding relative overflow-hidden">
-        <AnimatedBackground variant="gradient" theme="healthcare" className="absolute inset-0" />
-        <FloatingElements count={6} variant="circles" theme="healthcare" className="absolute inset-0" />
+        
         <div className="container mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

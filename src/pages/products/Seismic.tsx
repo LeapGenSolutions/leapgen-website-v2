@@ -51,8 +51,7 @@ const Seismic = () => {
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="section-padding relative overflow-hidden theme-seismic">
-        <AnimatedBackground variant="gradient" theme="seismic" className="absolute inset-0" />
-        <FloatingElements count={6} variant="circles" theme="seismic" className="absolute inset-0" />
+        
         <div className="container mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -271,14 +270,14 @@ const Seismic = () => {
                 ))}
               </div>
 
-              <div className="mt-8">
+              {/* <div className="mt-8">
                 <Link to="/industries/healthcare">
                   <GradientButton variant="seismic">
                     Learn About Healthcare Solutions
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </GradientButton>
                 </Link>
-              </div>
+              </div> */}
             </motion.div>
 
             <motion.div

@@ -89,9 +89,7 @@ const CompleteSolutionFinance = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <AnimatedBackground variant="mesh" theme="finance" className="absolute inset-0 opacity-20" />
-      <FloatingElements count={8} variant="mixed" theme="finance" className="absolute inset-0 opacity-15" />
-      {/* Hero Section */}
+      
       <section className="pt-32 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div

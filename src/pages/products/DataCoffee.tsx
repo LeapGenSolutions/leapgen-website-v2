@@ -63,9 +63,8 @@ const DataCoffee = () => {
         />
         {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black/90 z-10" />
-        
-        <AnimatedBackground variant="particles" theme="datacoffee" className="absolute inset-0 z-20" />
-        <FloatingElements count={8} variant="hexagons" theme="datacoffee" className="absolute inset-0 z-20" />
+
+
         <div className="container mx-auto relative z-30">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -83,10 +82,10 @@ const DataCoffee = () => {
               Create Synthetic Test Data from Production Without Data Leaving Your Organization
             </h3>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              DataCoffee is a comprehensive data governance platform that creates realistic synthetic data from your production systems 
+              DataCoffee is a comprehensive data governance platform that creates realistic synthetic data from your production systems
               while ensuring sensitive information never leaves your organization. Perfect for regulated industries requiring GDPR, HIPAA, and FedRAMP compliance.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link to="/contact?type=demo&product=data-coffee">
                 <GradientButton variant="datacoffee" size="lg">
@@ -128,10 +127,10 @@ const DataCoffee = () => {
             >
               <h2 className="text-4xl font-bold text-white mb-6">Enterprise-Grade Data Governance</h2>
               <p className="text-xl text-gray-300 mb-8">
-                DataCoffee provides comprehensive data governance capabilities designed for regulated industries that need to 
+                DataCoffee provides comprehensive data governance capabilities designed for regulated industries that need to
                 maintain strict compliance while enabling data-driven innovation.
               </p>
-              
+
               <div className="space-y-6">
                 <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-3">Real-time Data Protection</h3>
@@ -229,10 +228,10 @@ const DataCoffee = () => {
             >
               <h2 className="text-4xl font-bold text-white mb-6">Synthetic Data Generator</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Creates usable data clones that retain statistical accuracy without containing any real user information, 
+                Creates usable data clones that retain statistical accuracy without containing any real user information,
                 ideal for safe testing, QA, and model training.
               </p>
-              
+
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <motion.div
@@ -249,14 +248,14 @@ const DataCoffee = () => {
                 ))}
               </div>
 
-              <div className="mt-8">
+              {/* <div className="mt-8">
                 <Link to="/resources/data-governance-guide">
                   <GradientButton variant="datacoffee">
                     Learn More About Data Governance
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </GradientButton>
                 </Link>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>

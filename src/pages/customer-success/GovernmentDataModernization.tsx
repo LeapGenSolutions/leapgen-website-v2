@@ -146,10 +146,7 @@ const GovernmentDataModernization = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <AnimatedBackground variant="mesh" theme="government" className="absolute inset-0 opacity-30" />
-      <FloatingElements count={8} variant="circles" theme="government" className="absolute inset-0 opacity-20" />
       
-      {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           <motion.div
