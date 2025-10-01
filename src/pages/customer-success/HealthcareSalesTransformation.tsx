@@ -326,7 +326,7 @@ const HealthcareSalesTransformation = () => {
               </Link>
             </GradientButton>
             <GradientButton variant="secondary" size="lg" asChild>
-              <Link to="/resources/surroundai-roi-calculator">Calculate Your ROI</Link>
+              <Link to="/resources/roi-calculator">Calculate Your ROI</Link>
             </GradientButton>
           </div>
           <div className="mt-6 text-center">

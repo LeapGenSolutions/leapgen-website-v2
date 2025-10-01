@@ -125,7 +125,7 @@ const SurroundAIRetail = () => {
                   <Link to="/contact?product=surround-ai&industry=retail">Request Demo</Link>
                 </GradientButton>
                 <GradientButton variant="secondary" size="lg" asChild>
-                  <Link to="/resources/surroundai-roi-calculator">Calculate ROI</Link>
+                  <Link to="/resources/roi-calculator">Calculate ROI</Link>
                 </GradientButton>
               </div>
             </motion.div>

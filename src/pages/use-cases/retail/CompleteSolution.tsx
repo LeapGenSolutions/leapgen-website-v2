@@ -29,7 +29,7 @@ const CompleteRetailSolution = () => {
                 <Link to="/contact?product=complete-solution&industry=retail">Request Demo</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link to="/resources/surroundai-roi-calculator">Calculate ROI</Link>
+                <Link to="/resources/roi-calculator">Calculate ROI</Link>
               </Button>
             </div>
           </div>

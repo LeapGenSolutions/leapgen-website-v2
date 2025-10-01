@@ -119,7 +119,7 @@ const DataCoffeeHealthcare = () => {
                   <Link to="/contact?product=data-coffee&industry=healthcare">See Healthcare Integration Demo</Link>
                 </GradientButton>
                 <GradientButton variant="secondary" size="lg" asChild>
-                  <Link to="/resources/datacoffee-roi-calculator">Calculate Administrative Savings</Link>
+                  <Link to="/resources/roi-calculator">Calculate Administrative Savings</Link>
                 </GradientButton>
               </div>
             </motion.div>

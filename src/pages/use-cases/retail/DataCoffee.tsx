@@ -29,7 +29,7 @@ const DataCoffeeRetail = () => {
                 <Link to="/contact?product=data-coffee&industry=retail">See Retail Demo</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link to="/resources/datacoffee-roi-calculator">Calculate ROI</Link>
+                <Link to="/resources/roi-calculator">Calculate ROI</Link>
               </Button>
             </div>
           </div>
