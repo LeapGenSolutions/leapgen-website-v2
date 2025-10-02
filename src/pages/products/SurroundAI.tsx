@@ -13,23 +13,23 @@ const SurroundAI = () => {
   const features = [
     {
       icon: Shield,
-      title: 'Intelligent Ticket Routing',
-      description: 'AI automatically categorizes and routes support tickets to the right teams for faster resolution.'
+      title: 'Multilingual & Voice Capabilities',
+      description: 'The platform supports text and voice interfaces for a global audience.'
     },
     {
       icon: TrendingUp,
-      title: 'Automated Responses',
-      description: 'Handle 80% of common inquiries instantly with context-aware AI responses.'
+      title: 'Custom AI Workflows',
+      description: 'It enables users to build domain-specific workflows for various sectors like healthcare, banking, and HR using no-code tools.'
     },
     {
       icon: Clock,
-      title: '24/7 Availability',
-      description: 'Provide round-the-clock support without increasing your team size.'
+      title: 'Real-Time Triage & Routing',
+      description: 'When necessary, it can escalate conversations to human agents with full context and an audit trail.'
     },
     {
       icon: Users,
-      title: 'Sentiment Analysis',
-      description: 'Understand customer emotions and prioritize urgent cases automatically.'
+      title: 'Continuous Learning',
+      description: 'The platform utilizes feedback loops and synthetic data to enable smarter conversations over time.'
     }
   ]
 

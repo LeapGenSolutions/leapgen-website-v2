@@ -131,7 +131,7 @@ const DataCoffeeHealthcare = () => {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop"
+                src="https://cdn.prod.website-files.com/67d32f4cc8c3d72092d6b92f/6801d479137af90668b9162b_67f6bfc0c3315bb48a1e6a85_67e1f53ef49100cb70040fd7_healthcare_technology_medical_data_by_metamorworks_gettyimages-1127069581_2400x1600-100837041-orig-1.webp"
                 alt="Healthcare Data Integration"
                 className="rounded-2xl shadow-2xl"
               />
